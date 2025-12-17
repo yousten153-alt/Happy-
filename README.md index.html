@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Page Title</title>
+<meta charset="UTF-8">
+
+<style>
+@font-face { 
+  font-family: "Merriweather Sans";
+  src: url('MerriweatherSans-Medium.ttf') format('truetype');
+}
+
+body {
+  background: #FFFFFF;
+  margin-bottom: 200px;
+}
+
+@keyframes BackgroundGradient {
+  0%{background-position:0% 50%;}
+  50%{background-position: 100% 50% }
+  100%{background-position: 0% 50%}
+
+}
+
+.VCE{
+  color: #f2f2f2;
+  background: linear-gradient(45deg, #FCE38A, #f5ad4d, #fd81b5, #f74689, #ad5af3, #8a13ef );
+  background-size: 450% 100%;
+  animation: BackgroundGradient 30s ease infinite;  
+  padding: 20px;
+  margin: 30px;
+  border-radius: 0.5rem;
+}
+
+.VCE_Title{
+  font-family: "Merriweather Sans", sans-serif;
+  font-weight: 400;
+  font-size: 30px;
+  margin-bottom: 0;
+}
+
+.JTime{
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 20px;
+}
+
+button {
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 16px;
+  padding: 15px 22px;
+  border:3px #f2f2f2 solid;
+  border-radius:20px;
+  word-break: break-word;
+  white-space: normal;  
+}
+
+</style>
+</head>
+<body>
+<div class="VCE">
+<h2 class="VCE_Title">Visual Code Editor for HTML, CSS and JavaScript</h2>
+<hr style="  border: 3px solid #f2f2f2;">
+<p class="JTime">Whatever code you write above, Live Preview will be visible here</p>
+<br>
+<button type="button" onclick="document.getElementById('Example').innerHTML = Date()">a Javascript Date and Time</button>
+<p class="JTime" id="Example"></p>
+<p class="JTime">Hit the "Clear" button and start typing Code.</p>
+</div>
+</body>
+</html><!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>Happify Events - تنظيم مناسبات</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f9f9f9; margin: 0; }
+        .header { background: linear-gradient(to right, #ff7e5f, #feb47b); color: white; padding: 20px; text-align: center; }
+        .container { padding: 20px; max-width: 800px; margin: auto; }
+        
+        /* تصميم الخانات */
+        .categories { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 20px; }
+        .card { background: white; border-radius: 15px; padding: 20px; text-align: center; box-shadow: 0 4px 8px rgba(0,0,0,0.1); cursor: pointer; }
+        .card:hover { transform: scale(1.05); transition: 0.3s; }
+        .card img { width: 50px; margin-bottom: 10px; }
+        
+        /* نموذج الحجز */
+        .booking-form { background: white; padding: 20px; border-radius: 15px; margin-top: 30px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+        input, select { width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ddd; border-radius: 8px; }
+        .price-tag { font-size: 24px; color: #ff7e5f; font-weight: bold; text-align: center; margin-top: 15px; }
+        button { width: 100%; background: #ff7e5f; color: white; border: none; padding: 15px; border-radius: 8px; font-size: 18px; cursor: pointer; }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h1>Happify Events</h1>
+    <p>نظم فرحك ومناسبتك في ثوانٍ</p>
+</div>
+
+<div class="container">
+    <div class="categories">
+        <div class="card">🏨 <h3>تنظيم فنادق</h3></div>
+        <div class="card">💍 <h3>قاعات أفراح</h3></div>
+        <div class="card">🏠 <h3>تنظيم بيوت</h3></div>
+        <div class="card">🍽️ <h3>أكل وديكور</h3></div>
+    </div>
+
+    <div class="booking-form">
+        <h3>تفاصيل المناسبة</h3>
+        <input type="text" placeholder="اسم المناسبة (مثلاً: حفل زفاف أحمد)">
+        <select>
+            <option>اختر نوع المكان</option>
+            <option>قاعة</option>
+            <option>فندق</option>
+            <option>منزل</option>
+        </select>
+        <input type="number" placeholder="عدد الحضور">
+        
+        <div class="price-tag">السعر التقريبي: 5000 ج.م</div>
+        <button>احجز الآن</button>
+    </div>
+</div>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happify Events - تطبيق تنظيم المناسبات</title>
+    <style>
+        :root {
+            --primary: #ff7e5f;
+            --secondary: #feb47b;
+            --bg: #fdfbfb;
+            --card-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        }
+        body { font-family: 'Cairo', sans-serif; background-color: var(--bg); margin: 0; padding-bottom: 50px; }
+        
+        /* الهيدر - واجهة الويب المصغرة */
+        .header { 
+            background: linear-gradient(135deg, var(--primary), var(--secondary)); 
+            color: white; padding: 40px 20px; text-align: center; border-bottom-left-radius: 30px; border-bottom-right-radius: 30px;
+        }
+        
+        .container { max-width: 600px; margin: auto; padding: 20px; }
+
+        /* تقسيم الخانات الأساسية */
+        .grid-menu { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: -30px; }
+        .category-card { 
+            background: white; border-radius: 20px; padding: 20px; text-align: center; 
+            box-shadow: var(--card-shadow); border: 2px solid transparent; transition: 0.3s;
+        }
+        .category-card:hover { border-color: var(--primary); transform: translateY(-5px); }
+        .category-card h3 { font-size: 16px; color: #444; margin-top: 10px; }
+        .icon { font-size: 35px; }
+
+        /* نموذج الحجز المطور */
+        .booking-section { background: white; border-radius: 25px; padding: 25px; margin-top: 30px; box-shadow: var(--card-shadow); }
+        h2 { color: #333; font-size: 20px; border-right: 4px solid var(--primary); padding-right: 10px; }
+        
+        label { display: block; margin: 15px 0 5px; font-weight: bold; color: #666; }
+        input, select { 
+            width: 100%; padding: 12px; border: 1.5px solid #eee; border-radius: 12px; 
+            box-sizing: border-box; font-size: 16px; background: #fafafa;
+        }
+
+        /* خانات الخدمات الإضافية */
+        .services-check { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px; }
+        .service-item { 
+            background: #f0f0f0; padding: 8px 15px; border-radius: 20px; font-size: 14px; 
+            cursor: pointer; transition: 0.3s;
+        }
+        .service-item.active { background: var(--primary); color: white; }
+
+        /* السعر النهائي */
+        .price-box { 
+            background: #fff5f2; border: 2px dashed var(--primary); padding: 20px; 
+            border-radius: 15px; text-align: center; margin-top: 25px;
+        }
+        .total-price { font-size: 30px; color: var(--primary); font-weight: 800; display: block; }
+        
+        .btn-confirm { 
+            width: 100%; background: linear-gradient(to left, var(--primary), var(--secondary)); 
+            color: white; border: none; padding: 18px; border-radius: 15px; 
+            font-size: 18px; font-weight: bold; margin-top: 20px; cursor: pointer;
+            box-shadow: 0 5px 15px rgba(255, 126, 95, 0.3);
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h1>Happify <span style="font-weight: 200;">Events</span></h1>
+    <p>خطط لمناسبتك بذكاء وبأفضل سعر</p>
+</div>
+
+<div class="container">
+    <div class="grid-menu">
+        <div class="category-card" onclick="selectCat('wedding')">
+            <span class="icon">💍</span>
+            <h3>تنظيم أفراح</h3>
+        </div>
+        <div class="category-card" onclick="selectCat('hotel')">
+            <span class="icon">🏨</span>
+            <h3>تنظيم فنادق</h3>
+        </div>
+        <div class="category-card" onclick="selectCat('hall')">
+            <span class="icon">🏛️</span>
+            <h3>حجز قاعات</h3>
+        </div>
+        <div class="category-card" onclick="selectCat('home')">
+            <span class="icon">🏡</span>
+            <h3>تنظيم منازل</h3>
+        </div>
+    </div>
+
+    <div class="booking-section">
+        <h2>تفاصيل الحجز</h2>
+        
+        <label>عنوان المناسبة</label>
+        <input type="text" placeholder="مثلاً: ليلة غمرة - حفل تخرج..">
+
+        <label>نوع الخدمة الأساسية</label>
+        <select id="basePrice" onchange="calculate()">
+            <option value="0">اختر نوع المكان..</option>
+            <option value="15000">قاعة أفراح كبرى</option>
+            <option value="8000">فندق (أوبن إير)</option>
+            <option value="3000">تجهيز منزل</option>
+            <option value="5000">حديقة فيلا</option>
+        </select>
+
+        <label>خدمات إضافية</label>
+        <div class="services-check">
+            <div class="service-item" id="s1" onclick="toggleService('s1', 2000)">🍽️ بوفيه طعام</div>
+            <div class="service-item" id="s2" onclick="toggleService('s2', 1500)">📸 تصوير فيديو</div>
+            <div class="service-item" id="s3" onclick="toggleService('s3', 2500)">🎨 ديكور ورد</div>
+            <div class="service-item" id="s4" onclick="toggleService('s4', 1000)">🎵 دي جي</div>
+        </div>
+
+        <div class="price-box">
+            <span>إجمالي السعر التقديري</span>
+            <span class="total-price" id="displayPrice">0 ج.م</span>
+        </div>
+
+        <button class="btn-confirm">تأكيد الحجز والتواصل</button>
+    </div>
+</div>
+
+<script>
+    let extraPrice = 0;
+
+    function toggleService(id, price) {
+        const element = document.getElementById(id);
+        if(element.classList.contains('active')) {
+            element.classList.remove('active');
+            extraPrice -= price;
+        } else {
+            element.classList.add('active');
+            extraPrice += price;
+        }
+        calculate();
+    }
+
+    function calculate() {
+        const base = parseInt(document.getElementById('basePrice').value);
+        const total = base + extraPrice;
+        document.getElementById('displayPrice').innerText = total + " ج.م";
+    }
+</script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happify Events - النسخة المطورة</title>
+    <style>
+        :root { --primary: #ff7e5f; --secondary: #feb47b; --bg: #fdfbfb; }
+        body { font-family: 'Cairo', sans-serif; background-color: var(--bg); margin: 0; padding-bottom: 50px; text-align: right; }
+        .header { background: linear-gradient(135deg, var(--primary), var(--secondary)); color: white; padding: 40px 20px; text-align: center; border-bottom-left-radius: 30px; border-bottom-right-radius: 30px; }
+        .container { max-width: 600px; margin: auto; padding: 20px; }
+        
+        /* شبكة التصنيفات */
+        .grid-menu { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: -30px; }
+        .category-card { background: white; border-radius: 20px; padding: 20px; text-align: center; box-shadow: 0 10px 20px rgba(0,0,0,0.05); transition: 0.3s; cursor: pointer; border: 2px solid transparent; }
+        .category-card:hover { border-color: var(--primary); transform: translateY(-5px); }
+        .icon { font-size: 35px; }
+
+        .section { background: white; border-radius: 25px; padding: 25px; margin-top: 30px; box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+        h2 { color: #333; font-size: 18px; border-right: 4px solid var(--primary); padding-right: 10px; margin-bottom: 20px; }
+
+        /* منطقة رفع الصور الجديدة */
+        .upload-area { border: 2px dashed #ddd; border-radius: 15px; padding: 30px; text-align: center; cursor: pointer; transition: 0.3s; background: #fafafa; }
+        .upload-area:hover { border-color: var(--primary); background: #fff5f2; }
+        .upload-area p { color: #888; margin: 10px 0 0; }
+        #imagePreview { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 15px; }
+        #imagePreview img { width: 80px; height: 80px; border-radius: 10px; object-fit: cover; border: 1px solid #ddd; }
+
+        /* الحساب والسعر */
+        .price-box { background: #fff5f2; border: 2px dashed var(--primary); padding: 20px; border-radius: 15px; text-align: center; margin-top: 25px; }
+        .total-price { font-size: 30px; color: var(--primary); font-weight: 800; }
+        .btn-confirm { width: 100%; background: linear-gradient(to left, var(--primary), var(--secondary)); color: white; border: none; padding: 18px; border-radius: 15px; font-size: 18px; font-weight: bold; margin-top: 20px; cursor: pointer; }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h1>Happify Events</h1>
+    <p>ارفع ذوقك.. ونحن ننفذ</p>
+</div>
+
+<div class="container">
+    <div class="grid-menu">
+        <div class="category-card"><span class="icon">💍</span><h3>أفراح</h3></div>
+        <div class="category-card"><span class="icon">🏨</span><h3>فنادق</h3></div>
+        <div class="category-card"><span class="icon">🏛️</span><h3>قاعات</h3></div>
+        <div class="category-card"><span class="icon">🏠</span><h3>بيوت</h3></div>
+    </div>
+
+    <div class="section">
+        <h2>أضف صور الإلهام (ديكور/أكل)</h2>
+        <div class="upload-area" onclick="document.getElementById('fileInput').click()">
+            <span style="font-size: 40px;">📸</span>
+            <p>اضغط هنا لرفع صور تعجبك لشكل المناسبة</p>
+            <input type="file" id="fileInput" hidden multiple accept="image/*" onchange="previewImages()">
+        </div>
+        <div id="imagePreview"></div>
+    </div>
+
+    <div class="section">
+        <h2>تفاصيل الحجز والسعر</h2>
+        <select id="basePrice" onchange="updatePrice()" style="width:100%; padding:12px; border-radius:10px; border:1px solid #ddd;">
+            <option value="0">اختر الباقة الأساسية..</option>
+            <option value="20000">باقة الفنادق الفاخرة</option>
+            <option value="10000">باقة القاعات الملكية</option>
+            <option value="5000">باقة تنظيم المنازل</option>
+        </select>
+
+        <div class="price-box">
+            <span>التكلفة التقديرية</span><br>
+            <span class="total-price" id="displayPrice">0 ج.م</span>
+        </div>
+        <button class="btn-confirm">إرسال الطلب</button>
+    </div>
+</div>
+
+<script>
+    function previewImages() {
+        const preview = document.getElementById('imagePreview');
+        const files = document.getElementById('fileInput').files;
+        preview.innerHTML = ""; 
+        for (let i = 0; i < files.length; i++) {
+            const file = files[i];
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const img = document.createElement("img");
+                img.src = e.target.result;
+                preview.appendChild(img);
+            }
+            reader.readAsDataURL(file);
+        }
+    }
+
+    function updatePrice() {
+        const price = document.getElementById('basePrice').value;
+        document.getElementById('displayPrice').innerText = price + " ج.م";
+    }
+</script>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happify Events Pro</title>
+    <style>
+        :root { --primary: #ff7e5f; --secondary: #feb47b; --bg: #f8f9fa; }
+        body { font-family: 'Cairo', sans-serif; background: var(--bg); margin: 0; padding-bottom: 80px; }
+        
+        /* الهيدر المتطور */
+        .header { background: linear-gradient(135deg, var(--primary), var(--secondary)); color: white; padding: 30px 20px; text-align: center; border-bottom-left-radius: 40px; border-bottom-right-radius: 40px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        
+        .container { max-width: 500px; margin: auto; padding: 15px; }
+
+        /* الأقسام الرئيسية بصور خلفية */
+        .main-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: -30px; }
+        .feature-card { background: white; border-radius: 20px; padding: 15px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.05); cursor: pointer; border: 2px solid transparent; transition: 0.3s; }
+        .feature-card:hover { border-color: var(--primary); transform: scale(1.02); }
+        .feature-card i { font-size: 30px; display: block; margin-bottom: 8px; }
+
+        /* قسم اختيار التاريخ والأكل */
+        .section { background: white; border-radius: 20px; padding: 20px; margin-top: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+        h3 { font-size: 16px; color: #333; margin-top: 0; border-right: 4px solid var(--primary); padding-right: 10px; }
+
+        .menu-options { display: flex; gap: 10px; overflow-x: auto; padding: 10px 0; }
+        .menu-item { flex: 0 0 100px; background: #fff5f2; padding: 10px; border-radius: 15px; text-align: center; font-size: 13px; cursor: pointer; border: 1px solid #ffe0d8; }
+        .menu-item.selected { background: var(--primary); color: white; }
+
+        /* الدردشة المصغرة */
+        .chat-btn { position: fixed; bottom: 20px; left: 20px; width: 60px; height: 60px; background: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 24px; box-shadow: 0 5px 15px rgba(255,126,95,0.4); cursor: pointer; }
+
+        /* السعر السفلي المشتعل */
+        .bottom-bar { position: fixed; bottom: 0; left: 0; right: 0; background: white; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 -5px 15px rgba(0,0,0,0.05); border-top-left-radius: 20px; border-top-right-radius: 20px; }
+        .total-price { color: var(--primary); font-weight: 800; font-size: 22px; }
+        .btn-pay { background: var(--primary); color: white; padding: 12px 25px; border-radius: 12px; border: none; font-weight: bold; cursor: pointer; }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h2>Happify <span style="font-weight: 200;">Pro</span></h2>
+    <p>مساعدك الشخصي لتنظيم الفرح</p>
+</div>
+
+<div class="container">
+    <div class="main-grid">
+        <div class="feature-card"><i>🏨</i><span>فنادق</span></div>
+        <div class="feature-card"><i>🏠</i><span>في المنزل</span></div>
+        <div class="feature-card"><i>💍</i><span>قاعات</span></div>
+        <div class="feature-card"><i>🍖</i><span>كاترينج</span></div>
+    </div>
+
+    <div class="section">
+        <h3>1. متى موعد المناسبة؟</h3>
+        <input type="date" id="eventDate" style="width:100%; padding:12px; border:1px solid #eee; border-radius:10px;">
+    </div>
+
+    <div class="section">
+        <h3>2. اختر نوع البوفيه</h3>
+        <div class="menu-options">
+            <div class="menu-item" onclick="selectMenu(this, 100)">🍽️ مشويات شرقية</div>
+            <div class="menu-item" onclick="selectMenu(this, 150)">🍣 بوفيه مفتوح</div>
+            <div class="menu-item" onclick="selectMenu(this, 80)">🧁 حلويات فقط</div>
+            <div class="menu-item" onclick="selectMenu(this, 120)">🍝 إيطالي</div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h3>3. إضافات خاصة</h3>
+        <label style="display:block; margin:10px 0;"><input type="checkbox" onchange="addExtra(2000, this)"> تصوير درونات (Drone) 🎥</label>
+        <label style="display:block; margin:10px 0;"><input type="checkbox" onchange="addExtra(1500, this)"> فرقة موسيقية 🎻</label>
+        <label style="display:block; margin:10px 0;"><input type="checkbox" onchange="addExtra(3000, this)"> ديكور إضاءة ليزر 🎆</label>
+    </div>
+</div>
+
+<div class="chat-btn">💬</div>
+
+<div class="bottom-bar">
+    <div>
+        <span style="font-size: 12px; color: #888;">السعر الإجمالي</span>
+        <div class="total-price" id="finalPrice">0 ج.م</div>
+    </div>
+    <button class="btn-pay">استمر للحجز</button>
+</div>
+
+<script>
+    let currentTotal = 0;
+    let menuPrice = 0;
+    let extras = 0;
+
+    function selectMenu(el, price) {
+        document.querySelectorAll('.menu-item').forEach(i => i.classList.remove('selected'));
+        el.classList.add('selected');
+        menuPrice = price * 100; // نفترض أن العدد الأدنى 100 فرد
+        updateDisplay();
+    }
+
+    function addExtra(price, cb) {
+        if(cb.checked) extras += price;
+        else extras -= price;
+        updateDisplay();
+    }
+
+    function updateDisplay() {
+        document.
